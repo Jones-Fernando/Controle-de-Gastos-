@@ -1,0 +1,29 @@
+@backend_HostAddress = http://localhost:5281
+
+### Pessoas
+GET {{backend_HostAddress}}/api/Pessoas
+Accept: application/json
+
+### Totais
+GET {{backend_HostAddress}}/api/Pessoas/totais
+Accept: application/json
+
+### Criar pessoa
+POST {{backend_HostAddress}}/api/Pessoas
+Content-Type: application/json
+
+{
+  "nome": "Maria",
+  "idade": 30
+}
+
+### Criar transação
+POST {{backend_HostAddress}}/api/Transacoes
+Content-Type: application/json
+
+{
+  "descricao": "Mercado",
+  "valor": 45.50,
+  "tipo": "Despesa",
+  "pessoaId": 1
+}
